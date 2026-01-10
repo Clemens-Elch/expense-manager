@@ -1,16 +1,81 @@
-# React + Vite
+# Expense Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modular React app for managing and visualizing expenses against a preset budget. Built with Vite for blazing-fast development and styled using Bootstrap.
 
-Currently, two official plugins are available:
+## ✨ Features
+- Add expenses with date, category, note, and amount
+- View all expenses in a styled table with delete functionality
+- See a real-time budget overview (initial, spent, remaining)
+- Modular architecture with reusable components
+- Responsive layout using Bootstrap
+- Powered by Vite for instant startup and hot reloading
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React
+- Vite
+- Bootstrap (via utility classes)
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Clone the repo
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/your-username/expense-manager.git
+cd expense-manager
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+> ⚠️ `node_modules` are not committed — make sure to run `npm install` before running the app.
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Then open your browser at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── App.jsx                  # Root layout with logo and header
+├── ExpenseManager.jsx       # Central logic and state management
+├── components/
+│   ├── BudgetOverview.jsx   # Displays budget summary
+│   ├── ExpenseForm.jsx      # Controlled form to add new expenses
+│   ├── ExpenseTable.jsx     # Table view with expenses
+│   └── DeleteExpense.jsx    # Confirmation button to remove an expense
+├── data/
+│   └── expenseData.js       # Contains initial budget and expenses
+├── App.css                  # Custom styles + Bootstrap utility classes
+└── main.jsx                 # App bootstrap entry point
+```
+
+---
+
+## 🧩 Component Breakdown
+
+- **App.jsx** – Root component, contains layout and branding
+- **ExpenseManager.jsx** – Handles all logic: state, calculations, and component wiring
+- **ExpenseForm.jsx** – Controlled form to add new expenses
+- **ExpenseTable.jsx** – Displays expense list in a table
+- **DeleteExpense.jsx** – Button with confirmation logic for deletion
+- **BudgetOverview.jsx** – Shows total budget, spent, and remaining
+
+---
+
+
+
+
