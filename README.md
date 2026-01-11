@@ -1,6 +1,7 @@
 # Expense Manager
 
-A sleek and modular React app for managing and visualizing expenses against a preset budget. Built with Vite for blazing-fast development and styled using Bootstrap.
+A sleek and modular React app for managing and visualizing expenses against a preset budget. 
+Built with Vite for blazing-fast development and styled using Bootstrap.
 
 ## ✨ Features
 - Add expenses with date, category, note, and amount
@@ -20,7 +21,7 @@ A sleek and modular React app for managing and visualizing expenses against a pr
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/expense-manager.git
+git clone https://github.com/Elch-Clemens/expense-manager.git
 cd expense-manager
 ```
 
