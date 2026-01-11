@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {categories} from "../data/expenseData.js"
 
 function ExpenseForm({onAdd}) {
     const [date, setDate] = useState("");
@@ -16,7 +17,8 @@ function ExpenseForm({onAdd}) {
 
         // unique IDs with timestamp, trim unifies input, parse in number
         const newExpense = {
-            id: Date.now(),date,
+            id: Date.now(),
+            date,
             category: category.trim(),
             note: note.trim(),
             amount: parseFloat(amount),
@@ -43,13 +45,18 @@ function ExpenseForm({onAdd}) {
                             onChange={(e) => setDate(e.target.value)}
                             required
                         />
-                        <input
-                            type="text"
-                            placeholder="Category"
+                        <select
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
                             required
-                        />
+                        >
+                            <option value="">Select category</option>
+                            {categories.map((cat) => (
+                                <option key={cat} value={cat}>
+                                    {cat}
+                                </option>
+                            ))}
+                        </select>
                         <input
                             type="text"
                             placeholder="Note"
