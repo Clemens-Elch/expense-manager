@@ -7,17 +7,23 @@ import About from "./components/About.jsx";
 function App() {
     return (
         <BrowserRouter>
-            <nav>
-                <Link to="/">Home</Link> |{" "}
-                <Link to="/categories">Categories</Link> |{" "}
-                <Link to="/about">About</Link>
-            </nav>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/categories" element={<Categories/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="*" element={<p>404 - Page not found</p>} />
-            </Routes>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-8 text-center">
+                        <nav>
+                            <Link to="/">Home</Link> |{" "}
+                            <Link to="/categories">Categories</Link> |{" "}
+                            <Link to="/about">About</Link>
+                        </nav>
+                    </div>
+                </div>
+                <Routes>
+                    <Route path="/" element={<Home/>} />
+                    <Route path="/categories" element={<Categories/>} />
+                    <Route path="/about" element={<About/>} />
+                    <Route path="*" element={<p>404 - Page not found</p>} />
+                </Routes>
+            </div>
         </BrowserRouter>
 
 
