@@ -1,32 +1,23 @@
 import './App.css'
-import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
+import {BrowserRouter,Routes, Route} from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Categories from "./components/Categories.jsx";
 import About from "./components/About.jsx";
+import {categories} from "./data/expenseData.js";
+import Layout from "./components/Layout.jsx";
 
 function App() {
     return (
         <BrowserRouter>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-8 text-center">
-                        <nav>
-                            <Link to="/">Home</Link> |{" "}
-                            <Link to="/categories">Categories</Link> |{" "}
-                            <Link to="/about">About</Link>
-                        </nav>
-                    </div>
-                </div>
                 <Routes>
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Layout />}>
+                    <Route index element={<Home categories={categories}/>} />
                     <Route path="/categories" element={<Categories/>} />
                     <Route path="/about" element={<About/>} />
                     <Route path="*" element={<p>404 - Page not found</p>} />
+                    </Route>
                 </Routes>
-            </div>
         </BrowserRouter>
-
-
     );
 }
 

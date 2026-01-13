@@ -31,12 +31,12 @@ h1 {
 }
 
 
-.app-container {
-  background-color: #f9f9f9;         /* slightly dim white */
-  border: 1px solid #ccc;            /* subtle grey border */
-  border-radius: 16px;               /* smooth rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* soft shadow for depth */
-}
+/*.app-container {*/
+/*  background-color: #f9f9f9;         !* slightly dim white *!*/
+/*  border: 1px solid #ccc;            !* subtle grey border *!*/
+/*  border-radius: 16px;               !* smooth rounded corners *!*/
+/*  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); !* soft shadow for depth *!*/
+/*}*/
 
 nav a{
   font-size: 1.2em;

@@ -40,12 +40,14 @@ function ExpenseForm({onAdd}) {
                 <div className="row">
                     <div className="">
                         <input
+                            className="m-1"
                             type="date"
                             value={date}
                             onChange={(e) => setDate(e.target.value)}
                             required
                         />
                         <select
+                            className="m-1"
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
                             required
@@ -58,12 +60,14 @@ function ExpenseForm({onAdd}) {
                             ))}
                         </select>
                         <input
+                            className="m-1"
                             type="text"
                             placeholder="Note"
                             value={note}
                             onChange={(e) => setNote(e.target.value)}
                         />
                         <input
+                            className="m-1"
                             type="number"
                             placeholder="Amount"
                             value={amount}

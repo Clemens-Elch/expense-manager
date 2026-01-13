@@ -21,8 +21,6 @@ function ExpenseManager() {
     };
 
 
-
-
 // Calculate for overview
     const calculateTotalSpent = (expenseData) => {
         return expenseData.reduce((sum, expense) => sum + expense.amount, 0);
@@ -44,7 +42,7 @@ function ExpenseManager() {
                 <ExpenseForm onAdd={handleAdd}/>
             </div>
             <div className="p-2">
-                <ExpenseTable expenses={expense} onDelete={onDelete} />
+                <ExpenseTable expenses={expense} onDelete={onDelete}/>
             </div>
         </div>
     );
